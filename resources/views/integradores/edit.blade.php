@@ -4,14 +4,15 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para registrar usuario y venta
+                Formulario para registrar una nueva integrador
             </p>
         </div>
     </section>
 
     <section class="section">
-        <form action="{{ route('integrador.store') }}" method="post">
+        <form action="{{ route('integrador.update', $integrador->id) }}" method="post">
             @csrf
+            @method('PUT')
 
             <div class="columns">
 
@@ -19,41 +20,42 @@
 
                     <div>
                         <label for="">Usuario: </label>
-                        <input class="input is-large" type="text" name="usuario" id="">
+                        <input class="input is-large" type="text" value="{{ $integrador->marca }}" name="usuario" id="">
                     </div>
 
                     <div>
                         <label for="">Contraseña: </label>
-                        <input class="input is-large" type="text" name="contraseña" id="">
+                        <input class="input is-large" type="text" value="{{ $integrador->modelo }}" name="contraseña" id="">
                     </div>
 
                     <div>
                         <label for="">Articulo: </label>
-                        <textarea class="input is-large" type="text" name="articulo" id=""></textarea>
+                        <textarea class="input is-large" name="articulo" id="" cols="30" rows="5"></textarea>
                     </div>
 
-                    <div>
-                        <label for="">Stock: </label>
-                        <textarea class="input is-large" type="number" name="stock" id=""></textarea>
-                    </div>
 
                 </div>
 
                 <div class="column">
 
                     <div>
-                        <label for="">Precio:</label>
-                        <input class="input is-large" type="number" name="precio" step="0.1" min="0" id="">
+                        <label for="">Stock: </label>
+                        <input class="input is-large" type="number" name="stock"  value="{{ $integrador->stock }}" id="">
                     </div>
 
                     <div>
-                        <label for="">Venta:</label>
-                        <input class="input is-large" type="number" name="venta" id="">
+                        <label for="">Precio: </label>
+                        <input class="input is-large" type="number" name="precio" value="{{ $integrador->precio }}" step="0.1" min="0" id="">
                     </div>
 
                     <div>
-                        <label for="">Factura:</label>
-                        <input class="input is-large" type="number" name="factura" id="">
+                        <label for="">Venta: </label>
+                        <input class="input is-large" type="number" name="venta" value="{{ $integrador->venta }}" id="">
+                    </div>
+
+                    <div>
+                        <label for="">Factura: </label>
+                        <input class="input is-large" type="number" name="factura" value="{{ $integrador->factura }}" id="">
                     </div>
 
                 </div>
