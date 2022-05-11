@@ -18,10 +18,10 @@ return new class extends Migration
             $table->String('usuario', 20)->unique();
             $table->string('contraseña', 50)->unique();
             $table->string('articulo', 50)->unique();
-            $table->int('stock');
+            $table->integer('stock');
             $table->decimal('precio', 4, 2, true);
-            $table->int('venta');
-            $table->int('facturas')->unique();
+            $table->integer('venta');
+            $table->integer('facturas')->unique();
             $table->timestamps();
         });
     }

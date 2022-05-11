@@ -12,13 +12,13 @@ class IntegradorController extends Controller
     public function index()
     {
         $integradors = Integrador::all();
-        return view('integradors.index', compact('integradors'));
+        return view('integradores.index', compact('integradors'));
     }
 
     
     public function create()
     {
-        return view('integradors.create');
+        return view('integradores.create');
     }
 
 

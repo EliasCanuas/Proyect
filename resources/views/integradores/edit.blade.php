@@ -49,12 +49,12 @@
                     </div>
 
                     <div>
-                        <label for="">Venta: </label>
+                        <label for="">Número de Venta: </label>
                         <input class="input is-large" type="number" name="venta" value="{{ $integrador->venta }}" id="">
                     </div>
 
                     <div>
-                        <label for="">Factura: </label>
+                        <label for="">Número de Factura: </label>
                         <input class="input is-large" type="number" name="factura" value="{{ $integrador->factura }}" id="">
                     </div>
 
@@ -64,7 +64,7 @@
 
             <div>
             <div class="is-flex is-justify-content-space-around">
-                <a href="{{ url('integrador/') }}" class="button is-danger is-large">X Cancelar</a>
+                <a href="{{ url('integrador/') }}" class="button is-danger is-large">Cancelar</a>
                 <input class="button is-light is-large" type="reset" value="Restablecer">
                 <input class="button is-link is-large" type="submit" value="Guardar">
             </div>

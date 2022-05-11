@@ -62,7 +62,7 @@
 
             <div>
             <div class="is-flex is-justify-content-space-around">
-                <a href="{{ url('integrador/') }}" class="button is-danger is-large">X Cancelar</a>
+                <a href="{{ url('integrador/') }}" class="button is-danger is-large">Cancelar</a>
                 <input class="button is-light is-large" type="reset" value="Restablecer">
                 <input class="button is-link is-large" type="submit" value="Guardar">
             </div>
