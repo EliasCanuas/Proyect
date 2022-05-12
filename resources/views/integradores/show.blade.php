@@ -18,9 +18,9 @@
         </section>
 
         <section class="section">
-            <p class="title">{{ $integrador->modelo }}</p>
-            <p class="subtitle">{{ $integrador->marca }}</p>
-            <p class="has-text-justify">{{ $integrador->descripcion }}</p>
+            <p class="title">{{ $integrador->usuario }}</p>
+            <p class="subtitle">{{ $integrador->contraseña }}</p>
+            <p class="has-text-justify">{{ $integrador->articulo }}</p>
         </section>
 
 @endsection

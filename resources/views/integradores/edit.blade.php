@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para registrar una nueva integrador
+                Formulario para registrar
             </p>
         </div>
     </section>

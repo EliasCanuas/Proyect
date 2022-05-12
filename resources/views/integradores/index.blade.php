@@ -6,6 +6,7 @@
             <p class="title">
                 Listado
             </p>
+            <a href="/" class="button">Regresar</a>
             <a class="button is-info" href="/integrador/create">Agregar</a>
         </div>
     </section>

@@ -45,7 +45,7 @@ class IntegradorController extends Controller
                 'facturas'             =>  $request->facturas
             ]);
     
-            return redirect()->route('proveedores.index');
+            return redirect()->route('integradores.index');
     }
 
     
@@ -63,7 +63,7 @@ class IntegradorController extends Controller
    
     public function update(UpdateIntegradorRequest $request, Integrador $integrador)
     {
-        $request->validate([
+       $request->validate([
             'usuario'           =>  'required',
             'contraseña'        =>  'required',
             'articulo'          =>  'required',
@@ -75,8 +75,10 @@ class IntegradorController extends Controller
 
             $integrador->update($request->all());
 
-            return redirect()->route('integradores.index');
+            return redirect()->route('integradores.index'); 
     }
+
+
 
    
     public function destroy(Integrador $integrador)
@@ -84,5 +86,11 @@ class IntegradorController extends Controller
         $integrador->delete();
 
         return redirect()->route('integradores.index');
+    }
+
+    public function datatable()
+    {
+        $integradors=integrador::all();
+        return view('integradors.datatables',compact('integradors'));
     }
 }
