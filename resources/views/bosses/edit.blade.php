@@ -10,7 +10,7 @@
     </section>
 
     <section class="section">
-        <form action="{{ route('integrador.update', $integrador->id) }}" method="post">
+        <form action="{{ route('jefe.update', $integrador->id) }}" method="post">
             @csrf
             @method('PUT')
 
@@ -30,23 +30,8 @@
                 <div class="column">
 
                     <div>
-                        <label for="">Stock: </label>
-                        <input class="input is-large" type="number" name="stock"  value="{{ $integrador->stock }}" id="">
-                    </div>
-
-                    <div>
-                        <label for="">Precio: </label>
-                        <input class="input is-large" type="number" name="precio" value="{{ $integrador->precio }}" step="0.1" min="0" id="">
-                    </div>
-
-                    <div>
-                        <label for="">Número de Venta: </label>
-                        <input class="input is-large" type="number" name="venta" value="{{ $integrador->venta }}" id="">
-                    </div>
-
-                    <div>
-                        <label for="">Número de Factura: </label>
-                        <input class="input is-large" type="number" name="factura" value="{{ $integrador->factura }}" id="">
+                        <label for="">Precio de venta: </label>
+                        <input class="input is-large" type="number" name="precioventa" value="{{ $integrador->precio }}" step="0.1" min="0" id="">
                     </div>
 
                 </div>
@@ -55,7 +40,7 @@
 
             <div>
             <div class="is-flex is-justify-content-space-around">
-                <a href="{{ url('integrador/') }}" class="button is-danger is-large">Cancelar</a>
+                <a href="{{ url('jefe/') }}" class="button is-danger is-large">Cancelar</a>
                 <input class="button is-light is-large" type="reset" value="Restablecer">
                 <input class="button is-link is-large" type="submit" value="Guardar">
             </div>

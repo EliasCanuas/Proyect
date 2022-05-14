@@ -26,7 +26,7 @@ class IntegradorController extends Controller
     {
         $request->validate([
             'usuario'           =>  'required',
-            'contraseña'        =>  'required',
+            'contrasenia'        =>  'required',
             'articulo'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
@@ -37,7 +37,7 @@ class IntegradorController extends Controller
     
             Integrador::create([
                 'usuario'              =>  $request->usuario,
-                'contraseña'           =>  $request->contraseña,
+                'contrasenia'           =>  $request->contrasenia,
                 'articulo'             =>  $request->articulo,
                 'stock'                =>  $request->stock,
                 'precio'               =>  $request->precio,
@@ -45,7 +45,7 @@ class IntegradorController extends Controller
                 'facturas'             =>  $request->facturas
             ]);
     
-            return redirect()->route('integradores.index');
+            return redirect()->route('integrador.index');
     }
 
     
@@ -85,7 +85,7 @@ class IntegradorController extends Controller
     {
         $integrador->delete();
 
-        return redirect()->route('integradores.index');
+        return redirect()->route('integrador.index');
     }
 
     public function datatable()

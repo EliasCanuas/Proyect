@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IntegradorController;
+use App\Http\Controllers\JefeController;
 
 
 Route::resources([
@@ -10,6 +11,9 @@ Route::resources([
 
 Route::get('integrador/datatable', 
 [IntegradorController::class, 'datatable']);
+
+Route::get('jefe/datatable', 
+[JefeController::class, 'datatable']);
 
 Route::get('/', function () {
     return view('welcome');

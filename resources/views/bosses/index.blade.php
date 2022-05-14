@@ -7,7 +7,7 @@
                 Listado
             </p>
             <a href="/" class="button">Regresar</a>
-            <a class="button is-info" href="/integrador/create">Agregar</a>
+            <a class="button is-info" href="/jefe/create">Agregar</a>
         </div>
     </section>
 
@@ -19,45 +19,34 @@
                 <thead>
                 <tr>
                     <th>Articulo</th>
-                    <th>Stock</th>
-                    <th>Precio</th>
-                    <th>Venta</th>
-                    <th>Factura</th>
+                    <th>Precio de venta</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>Articulo</th>
-                    <th>Stock</th>
-                    <th>Precio</th>
-                    <th>Venta</th>
-                    <th>Factura</th>
+                    <th>Precio de venta</th>
                 </tr>
                 </tfoot>
                 <tbody>
 
                 @forelse($integradors as $integrador)
                     <tr>
-                        <td>{{ $integrador->articulo }}</td>
-                        <td>{{ $integrador->stock }}</td>
-                        <td>$ {{ $integrador->precio }}</td>
-                        <td>$ {{ $integrador->venta }}</td>
-                        <td>$ {{ $integrador->factura }}</td>
-                            @if ($integrador->disponible == 1 )
-                                <p>Disponible</p>
-                            @else
-                                <p>No disponible</p>
-                            @endif
+                        <td>{{ $jefe->articulo }}</td>
+                        <td>$ {{ $jefe->precioventa }}</td>
                         </td>
                         <td>
-                            <form action="{{ route('integrador.destroy', $integrador->id) }}" 
+                            <form action="{{ route('jefe.destroy', $jefe->id) }}" 
                             method="POST">
+
                             <a class="button is-info is-small"
-                            href="{{ route('integrador.show', $integrador->id)}}">
+                            href="{{ route('jefe.show', $jefe->id)}}">
                             Ver</a>
+
                             <a class="button is-info is-small"
-                            href="{{ route('integrador.edit', $integrador->id)}}">
+                            href="{{ route('jefe.edit', $jefe->id)}}">
                             Editar</a>
+
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="button is-danger is-small">

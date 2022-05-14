@@ -5,16 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Integrador extends Model
+class jefe extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'usuario',
-        'contrasenia',
         'articulo',
-        'stock',
-        'precio',
-        'venta',
-        'facturas'
+        'precioventa'
     ];
 }
