@@ -30,7 +30,7 @@
                 </tfoot>
                 <tbody>
 
-                @forelse($integradors as $integrador)
+                @forelse($jefes as $jefe)
                     <tr>
                         <td>{{ $jefe->articulo }}</td>
                         <td>$ {{ $jefe->precioventa }}</td>

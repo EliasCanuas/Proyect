@@ -10,8 +10,8 @@
                 </div>
                 <div class="column">
                     <p class="title">
-                        Detalles de {{ $integrador->marca }}
-                        {{$integrador->modelo}}
+                        Detalles de {{ $integrador->articulo }}
+                        {{$integrador->stock}}
                     </p>
                 </div>
             </div>

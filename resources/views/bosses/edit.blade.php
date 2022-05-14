@@ -10,7 +10,7 @@
     </section>
 
     <section class="section">
-        <form action="{{ route('jefe.update', $integrador->id) }}" method="post">
+        <form action="{{ route('jefe.update', $boss->id) }}" method="post">
             @csrf
             @method('PUT')
 
@@ -31,7 +31,7 @@
 
                     <div>
                         <label for="">Precio de venta: </label>
-                        <input class="input is-large" type="number" name="precioventa" value="{{ $integrador->precio }}" step="0.1" min="0" id="">
+                        <input class="input is-large" type="number" name="precioventa" value="{{ $jefe->precio }}" step="0.1" min="0" id="">
                     </div>
 
                 </div>

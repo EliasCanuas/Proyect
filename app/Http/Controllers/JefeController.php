@@ -8,15 +8,11 @@ use App\Http\Requests\UpdatejefeRequest;
 
 class JefeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        $integradors = boss::all();
-        return view('bosses.index', compact('jeves'));
+        $jefes = jefe::all();
+        return view('bosses.index', compact('jefes'));
     }
 
     public function create()
@@ -28,13 +24,13 @@ class JefeController extends Controller
     {
         $request->validate([
             'articulo'          =>  'required',
-            'precioventa'            =>  'required'
+            'precioventa'       =>  'required'
             ]);
     
     
             jefe::create([
                 'articulo'             =>  $request->articulo,
-                'precioventa'               =>  $request->precioventa
+                'precioventa'          =>  $request->precioventa
             ]);
     
             return redirect()->route('bosses.index');
@@ -43,12 +39,12 @@ class JefeController extends Controller
 
     public function show(jefe $jefe)
     {
-        return view('bosses.show', compact('boss'));
+        return view('bosses.show', compact('jefes'));
     }
 
     public function edit(jefe $jefe)
     {
-        return view('bosses.edit', compact('boss'));
+        return view('bosses.edit', compact('jefes'));
     }
 
     public function update(UpdatejefeRequest $request, jefe $jefe)
@@ -67,12 +63,12 @@ class JefeController extends Controller
     {
         $jefe->delete();
 
-        return redirect()->route('boss.index');
+        return redirect()->route('bosses.index');
     }
 
     public function datatable()
     {
-        $integradors=boss::all();
-        return view('jeves.datatables',compact('jeves'));
+        $jefes=jefe::all();
+        return view('bosses.datatables',compact('jefes'));
     }
 }

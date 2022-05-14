@@ -9,6 +9,10 @@ Route::resources([
     'integrador'   => IntegradorController::class
 ]);
 
+Route::resources([
+    'jefe'   => JefeController::class
+]);
+
 Route::get('integrador/datatable', 
 [IntegradorController::class, 'datatable']);
 
