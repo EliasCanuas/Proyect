@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('jeves', function (Blueprint $table) {
             $table->id();
-            $table->string('articulo', 50)->unique();
+            $table->string('articulo', 50);
             $table->decimal('precioventa', 8, 2, true);
             $table->timestamps();
         });

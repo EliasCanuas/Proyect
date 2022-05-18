@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para registrar articulo
+                Formulario para editar articulo
             </p>
         </div>
     </section>

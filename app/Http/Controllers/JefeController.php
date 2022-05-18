@@ -33,18 +33,18 @@ class JefeController extends Controller
                 'precioventa'          =>  $request->precioventa
             ]);
     
-            return redirect()->route('bosses.index');
+            return redirect()->route('jefe.index');
     }
 
 
     public function show(jefe $jefe)
     {
-        return view('bosses.show', compact('jefes'));
+        return view('bosses.show', compact('jefe'));
     }
 
     public function edit(jefe $jefe)
     {
-        return view('bosses.edit', compact('jefes'));
+        return view('bosses.edit', compact('jefe'));
     }
 
     public function update(UpdatejefeRequest $request, jefe $jefe)
@@ -56,19 +56,19 @@ class JefeController extends Controller
 
             $jefe->update($request->all());
 
-            return redirect()->route('bosses.index'); 
+            return redirect()->route('jefe.index'); 
     }
 
     public function destroy(jefe $jefe)
     {
         $jefe->delete();
 
-        return redirect()->route('bosses.index');
+        return redirect()->route('jefe.index');
     }
 
     public function datatable()
     {
         $jefes=jefe::all();
-        return view('bosses.datatables',compact('jefes'));
+        return view('bosses.datatables',compact('jefe'));
     }
 }

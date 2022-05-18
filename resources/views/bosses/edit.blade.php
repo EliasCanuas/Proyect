@@ -4,13 +4,13 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para registrar articulo
+                Formulario para editar
             </p>
         </div>
     </section>
 
     <section class="section">
-        <form action="{{ route('jefe.update', $boss->id) }}" method="post">
+        <form action="{{ route('jefe.update', $jefe->id) }}" method="post">
             @csrf
             @method('PUT')
 
