@@ -29,6 +29,11 @@
 
                 <div class="column">
 
+                <div>
+                        <label for="">Cantidad: </label>
+                        <input class="input is-large" type="number" name="cantidad"  value="{{ $integrador->cantidad }}" id="">
+                    </div>
+
                     <div>
                         <label for="">Stock: </label>
                         <input class="input is-large" type="number" name="stock"  value="{{ $integrador->stock }}" id="">

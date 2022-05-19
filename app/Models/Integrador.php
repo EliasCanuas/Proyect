@@ -10,6 +10,7 @@ class Integrador extends Model
     use HasFactory;
     protected $fillable = [
         'articulo',
+        'cantidad',
         'stock',
         'precio',
         'venta',

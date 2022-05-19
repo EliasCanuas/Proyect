@@ -26,6 +26,7 @@ class IntegradorController extends Controller
     {
         $request->validate([
             'articulo'          =>  'required',
+            'cantidad'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
             'venta'             =>  'required',
@@ -35,6 +36,7 @@ class IntegradorController extends Controller
     
             Integrador::create([
                 'articulo'             =>  $request->articulo,
+                'cantidad'             =>  $request->cantidad,
                 'stock'                =>  $request->stock,
                 'precio'               =>  $request->precio,
                 'venta'                =>  $request->venta,
@@ -61,6 +63,7 @@ class IntegradorController extends Controller
     {
        $request->validate([
             'articulo'          =>  'required',
+            'cantidad'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
             'venta'             =>  'required',

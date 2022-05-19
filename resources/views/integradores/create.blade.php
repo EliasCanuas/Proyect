@@ -24,6 +24,11 @@
                     </div>
 
                     <div>
+                        <label for="">Cantidad: </label>
+                        <input class="input is-large" type="number" name="cantidad" step="1" min="0" id="">
+                    </div>
+
+                    <div>
                         <label for="">Stock: </label>
                         <input class="input is-large" type="number" name="stock" step="0.1" min="0" id="">
                     </div>

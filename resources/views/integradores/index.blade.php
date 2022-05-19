@@ -19,6 +19,7 @@
                 <thead>
                 <tr>
                     <th>Articulo</th>
+                    <th>Cantidad</th>
                     <th>Stock</th>
                     <th>Precio</th>
                     <th>Venta</th>
@@ -28,6 +29,7 @@
                 <tfoot>
                 <tr>
                     <th>Articulo</th>
+                    <th>Cantidad</th>
                     <th>Stock</th>
                     <th>Precio</th>
                     <th>Venta</th>
@@ -39,6 +41,7 @@
                 @forelse($integradors as $integrador)
                     <tr>
                         <td>{{ $integrador->articulo }}</td>
+                        <td>{{ $integrador->cantidad }}</td>
                         <td>{{ $integrador->stock }}</td>
                         <td>$ {{ $integrador->precio }}</td>
                         <td>$ {{ $integrador->venta }}</td>
