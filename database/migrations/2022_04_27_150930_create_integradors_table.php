@@ -20,7 +20,6 @@ return new class extends Migration
             $table->integer('stock');
             $table->decimal('precio', 8, 2, true);
             $table->decimal('venta', 8, 2);
-            $table->decimal('facturas', 8, 2);
             $table->timestamps();
         });
     }

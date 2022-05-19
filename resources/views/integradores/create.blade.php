@@ -47,10 +47,6 @@
                         <input class="input is-large" type="number" name="venta" id="">
                     </div>
 
-                    <div>
-                        <label for="">Factura:</label>
-                        <input class="input is-large" type="number" name="facturas" id="">
-                    </div>
 
                 </div>
 

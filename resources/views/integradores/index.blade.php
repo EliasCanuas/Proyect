@@ -23,7 +23,7 @@
                     <th>Stock</th>
                     <th>Precio</th>
                     <th>Venta</th>
-                    <th>Factura</th>
+                    <th>Total de pagar</th>
                 </tr>
                 </thead>
                 <tfoot>
@@ -33,7 +33,7 @@
                     <th>Stock</th>
                     <th>Precio</th>
                     <th>Venta</th>
-                    <th>Factura</th>
+                    <th>Total a pagar</th>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -45,7 +45,7 @@
                         <td>{{ $integrador->stock }}</td>
                         <td>$ {{ $integrador->precio }}</td>
                         <td>$ {{ $integrador->venta }}</td>
-                        <td>$ {{ $integrador->factura }}</td>
+                        <td>$ {{ $integrador->precio * $integrador->cantidad }}</td>
                             @if ($integrador->disponible == 1 )
                                 <p>Disponible</p>
                             @else

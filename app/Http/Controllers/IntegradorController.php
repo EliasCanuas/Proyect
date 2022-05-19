@@ -29,8 +29,7 @@ class IntegradorController extends Controller
             'cantidad'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
-            'venta'             =>  'required',
-            'facturas'          =>  'required'
+            'venta'             =>  'required'
             ]);
     
     
@@ -39,8 +38,7 @@ class IntegradorController extends Controller
                 'cantidad'             =>  $request->cantidad,
                 'stock'                =>  $request->stock,
                 'precio'               =>  $request->precio,
-                'venta'                =>  $request->venta,
-                'facturas'             =>  $request->facturas
+                'venta'                =>  $request->venta
             ]);
     
             return redirect()->route('integrador.index');
@@ -66,8 +64,7 @@ class IntegradorController extends Controller
             'cantidad'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
-            'venta'             =>  'required',
-            'facturas'          =>  'required'
+            'venta'             =>  'required'
             ]);
 
             $integrador->update($request->all());

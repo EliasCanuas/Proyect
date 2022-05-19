@@ -13,7 +13,6 @@ class Integrador extends Model
         'cantidad',
         'stock',
         'precio',
-        'venta',
-        'facturas'
+        'venta'
     ];
 }

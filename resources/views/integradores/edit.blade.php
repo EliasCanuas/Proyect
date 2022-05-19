@@ -49,10 +49,7 @@
                         <input class="input is-large" type="number" name="venta" value="{{ $integrador->venta }}" id="">
                     </div>
 
-                    <div>
-                        <label for="">Número de Factura: </label>
-                        <input class="input is-large" type="number" name="facturas" value="{{ $integrador->facturas }}" id="">
-                    </div>
+                   
 
                 </div>
 
