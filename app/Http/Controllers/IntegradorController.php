@@ -25,8 +25,6 @@ class IntegradorController extends Controller
     public function store(StoreIntegradorRequest $request)
     {
         $request->validate([
-            'usuario'           =>  'required',
-            'contrasenia'       =>  'required',
             'articulo'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
@@ -36,8 +34,6 @@ class IntegradorController extends Controller
     
     
             Integrador::create([
-                'usuario'              =>  $request->usuario,
-                'contrasenia'          =>  $request->contrasenia,
                 'articulo'             =>  $request->articulo,
                 'stock'                =>  $request->stock,
                 'precio'               =>  $request->precio,
@@ -64,8 +60,6 @@ class IntegradorController extends Controller
     public function update(UpdateIntegradorRequest $request, Integrador $integrador)
     {
        $request->validate([
-            'usuario'           =>  'required',
-            'contraseña'        =>  'required',
             'articulo'          =>  'required',
             'stock'             =>  'required',
             'precio'            =>  'required',
@@ -75,7 +69,7 @@ class IntegradorController extends Controller
 
             $integrador->update($request->all());
 
-            return redirect()->route('integradores.index'); 
+            return redirect()->route('integrador.index'); 
     }
 
 

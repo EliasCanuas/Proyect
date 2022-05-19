@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('integradors', function (Blueprint $table) {
             $table->id();
-            $table->String('usuario', 20);
-            $table->string('contrasenia', 50);
             $table->string('articulo', 50)->unique();
             $table->integer('stock');
             $table->decimal('precio', 8, 2, true);
