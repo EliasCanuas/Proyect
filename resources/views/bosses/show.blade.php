@@ -10,17 +10,16 @@
                 </div>
                 <div class="column">
                     <p class="title">
-                        Detalles de {{ $jefe->marca }}
-                        {{$jefe->modelo}}
+                        Detalles de {{ $jefe->articulo }}
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <p class="title">{{ $jefe->usuario }}</p>
-            <p class="subtitle">{{ $jefe->contraseña }}</p>
-            <p class="has-text-justify">{{ $jefe->articulo }}</p>
+            <p class="title">Proveedor: {{ $jefe->proveedor }}</p>
+            <p class="has-text-justify">Articulo: {{ $jefe->articulo }}</p>
+            <p class="has-text-justify">Precio: {{ $jefe->precioventa }} pesos</p>
         </section>
 
 @endsection

@@ -24,13 +24,15 @@ class JefeController extends Controller
     {
         $request->validate([
             'articulo'          =>  'required',
-            'precioventa'       =>  'required'
+            'precioventa'       =>  'required',
+            'proveedor'         =>  'required'
             ]);
     
     
             jefe::create([
                 'articulo'             =>  $request->articulo,
-                'precioventa'          =>  $request->precioventa
+                'precioventa'          =>  $request->precioventa,
+                'proveedor'            =>  $request->proveedor
             ]);
     
             return redirect()->route('jefe.index');
@@ -51,7 +53,8 @@ class JefeController extends Controller
     {
         $request->validate([
             'articulo'          =>  'required',
-            'precioventa'       =>  'required'
+            'precioventa'       =>  'required',
+            'proveedor'         =>  'required'
             ]);
 
             $jefe->update($request->all());

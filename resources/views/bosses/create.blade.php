@@ -28,8 +28,13 @@
                 <div class="column">
 
                     <div>
-                        <label for="">Precio de venta:</label>
+                        <label for="">Precio de venta: </label>
                         <input class="input is-large" type="number" name="precioventa" step="0.1" min="0" id="">
+                    </div>
+
+                    <div>
+                        <label for="">Proveedor: </label>
+                        <textarea class="input is-large" type="text" name="proveedor" id=""></textarea>
                     </div>
 
                 </div>

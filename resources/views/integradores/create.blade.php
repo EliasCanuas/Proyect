@@ -30,7 +30,7 @@
 
                     <div>
                         <label for="">Stock: </label>
-                        <input class="input is-large" type="number" name="stock" step="0.1" min="0" id="">
+                        <input class="input is-large" type="number" name="stock" step="1" min="0" id="">
                     </div>
 
                 </div>
@@ -39,12 +39,12 @@
 
                     <div>
                         <label for="">Precio:</label>
-                        <input class="input is-large" type="number" name="precio" step="0.1" min="0" id="">
+                        <input class="input is-large" type="number" name="precio" step="1" min="0" id="">
                     </div>
 
                     <div>
                         <label for="">Venta:</label>
-                        <input class="input is-large" type="number" name="venta" id="">
+                        <input class="input is-large" type="number" name="venta" id="" step="1" min="0" id="">
                     </div>
 
 

@@ -10,6 +10,7 @@ class jefe extends Model
     use HasFactory;
     protected $fillable = [
         'articulo',
-        'precioventa'
+        'precioventa',
+        'proveedor'
     ];
 }

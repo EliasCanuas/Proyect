@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('articulo', 50);
             $table->decimal('precioventa', 8, 2, true);
+            $table->string('proveedor', 50);
             $table->timestamps();
         });
     }

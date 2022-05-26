@@ -34,6 +34,11 @@
                         <input class="input is-large" type="number" name="precioventa" value="{{ $jefe->precio }}" step="0.1" min="0" id="">
                     </div>
 
+                    <div>
+                        <label for="">Proveedor: </label>
+                        <textarea class="input is-large" name="proveedor" id="" cols="30" rows="5"></textarea>
+                    </div>
+
                 </div>
 
             </div>

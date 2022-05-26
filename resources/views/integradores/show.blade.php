@@ -11,16 +11,15 @@
                 <div class="column">
                     <p class="title">
                         Detalles de {{ $integrador->articulo }}
-                        {{$integrador->stock}}
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="section">
-            <p class="title">{{ $integrador->usuario }}</p>
-            <p class="subtitle">{{ $integrador->contraseña }}</p>
-            <p class="has-text-justify">{{ $integrador->articulo }}</p>
+            <p class="title">Cantidad que se compro: {{ $integrador->stock }}</p>
+            <p class="subtitle">Precio unitario: {{ $integrador->precio }} pesos</p>
+            <p class="has-text-justify">Numero de venta: {{ $integrador->venta }}</p>
         </section>
 
 @endsection

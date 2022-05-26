@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Listado
+                Interfaz del administrador
             </p>
             <a href="/" class="button">Regresar</a>
             <a class="button is-info" href="/jefe/create">Agregar</a>
@@ -20,12 +20,14 @@
                 <tr>
                     <th>Articulo</th>
                     <th>Precio de venta</th>
+                    <th>Proveedor</th>
                 </tr>
                 </thead>
                 <tfoot>
                 <tr>
                     <th>Articulo</th>
                     <th>Precio de venta</th>
+                    <th>Proveedor</th>
                 </tr>
                 </tfoot>
                 <tbody>
@@ -34,6 +36,7 @@
                     <tr>
                         <td>{{ $jefe->articulo }}</td>
                         <td>$ {{ $jefe->precioventa }}</td>
+                        <td>{{ $jefe->proveedor }}</td>
                         </td>
                         <td>
                             <form action="{{ route('jefe.destroy', $jefe->id) }}" 

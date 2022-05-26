@@ -44,7 +44,7 @@
                         <td>{{ $integrador->cantidad }}</td>
                         <td>{{ $integrador->stock }}</td>
                         <td>$ {{ $integrador->precio }}</td>
-                        <td>$ {{ $integrador->venta }}</td>
+                        <td>{{ $integrador->venta }}</td>
                         <td>$ {{ $integrador->precio * $integrador->cantidad }}</td>
                             @if ($integrador->disponible == 1 )
                                 <p>Disponible</p>

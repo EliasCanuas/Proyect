@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('cantidad');
             $table->integer('stock');
             $table->decimal('precio', 8, 2, true);
-            $table->decimal('venta', 8, 2);
+            $table->integer('venta');
             $table->timestamps();
         });
     }
