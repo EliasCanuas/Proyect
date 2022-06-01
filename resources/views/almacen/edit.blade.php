@@ -21,7 +21,7 @@
 
                     <div>
                         <label for="">Producto: </label>
-                        <textarea class="input is-large" name="prodcuto" id="" cols="30" rows="5" value="{{ $almacen->producto }}"></textarea>
+                        <textarea class="input is-large" name="producto" id="" cols="30" rows="5" value="{{ $almacen->producto }}"></textarea>
                     </div>
 
                     </div>

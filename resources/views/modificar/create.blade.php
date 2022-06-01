@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Agregar y modificar articulos
+                Modificar articulos
             </p>
         </div>
     </section>

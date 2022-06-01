@@ -28,7 +28,7 @@
 
                 @forelse($articulos as $articulo)
                     <tr>
-                        <td>{{ $articulo->prodcuto }}</td>
+                        <td>{{ $articulo->producto }}</td>
                         <td>{{ $articulo->cantidad }}</td>
                         <td>{{ $articulo->precio }}</td>
                         </td>
@@ -42,7 +42,7 @@
 
                             <a class="button is-info is-small"
                             href="{{ route('articulo.edit', $articulo->id)}}">
-                            Editar</a>
+                            Restaurar</a>
 
                             @csrf
                             @method('DELETE')

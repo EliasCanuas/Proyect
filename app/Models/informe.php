@@ -9,8 +9,8 @@ class informe extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'cantidad',
         'producto',
+        'cantidad',
         'precio'
     ];
 }

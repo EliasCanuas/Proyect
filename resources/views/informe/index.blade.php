@@ -4,10 +4,10 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Listado
+                Informe
             </p>
             <a href="/" class="button">Regresar</a>
-            <a class="button is-info" href="/integrador/create">Agregar</a>
+            <a class="button is-info" href="/informe/create">Agregar</a>
         </div>
     </section>
 
@@ -18,33 +18,29 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Articulo</th>
+                    <th>Prodcuto</th>
                     <th>Cantidad</th>
-                    <th>Stock</th>
                     <th>Precio</th>
-                    <th>Venta</th>
-                    <th>Total de pagar</th>
+                    <th>Total de ganancia</th>
                 </tr>
                 </thead>
                 <tbody>
 
-                @forelse($integradors as $integrador)
+                @forelse($informes as $informe)
                     <tr>
-                        <td>{{ $integrador->articulo }}</td>
-                        <td>{{ $integrador->cantidad }}</td>
-                        <td>{{ $integrador->stock }}</td>
-                        <td>$ {{ $integrador->precio }}</td>
-                        <td>{{ $integrador->venta }}</td>
-                        <td>$ {{ $integrador->precio * $integrador->cantidad }}</td>
+                        <td>{{ $informe->producto }}</td>
+                        <td>{{ $informe->cantidad }}</td>
+                        <td>$ {{ $informe->precio }}</td>
+                        <td>$ {{ $informe->precio * $informe->cantidad }}</td>
                         </td>
                         <td>
-                            <form action="{{ route('integrador.destroy', $integrador->id) }}" 
+                            <form action="{{ route('informe.destroy', $informe->id) }}" 
                             method="POST">
                             <a class="button is-info is-small"
-                            href="{{ route('integrador.show', $integrador->id)}}">
-                            Imprimir ticket</a>
+                            href="{{ route('informe.show', $informe->id)}}">
+                            Ver</a>
                             <a class="button is-info is-small"
-                            href="{{ route('integrador.edit', $integrador->id)}}">
+                            href="{{ route('informe.edit', $informe->id)}}">
                             Editar</a>
                             @csrf
                             @method('DELETE')

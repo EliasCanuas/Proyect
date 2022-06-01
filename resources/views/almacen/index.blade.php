@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Agregar articulo
+                Articulos de almacen
             </p>
             <a href="/" class="button">Regresar</a>
             <a class="button is-info" href="/almacen/create">Agregar</a>
@@ -27,7 +27,7 @@
 
                 @forelse($almacens as $almacen)
                     <tr>
-                        <td>{{ $almacen->prodcuto }}</td>
+                        <td>{{ $almacen->producto }}</td>
                         <td>{{ $almacen->cantidad }}</td>
                         </td>
                         <td>

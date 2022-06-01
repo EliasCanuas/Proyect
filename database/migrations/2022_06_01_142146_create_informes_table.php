@@ -11,8 +11,8 @@ return new class extends Migration
     {
         Schema::create('informes', function (Blueprint $table) {
             $table->id();
-            $table->integer('cantidad');
             $table->string('producto', 50);
+            $table->integer('cantidad');
             $table->decimal('precio', 8, 2, true);
             $table->timestamps();
         });

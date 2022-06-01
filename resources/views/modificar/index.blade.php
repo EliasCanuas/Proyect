@@ -4,7 +4,7 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Agregar articulo
+                Modificar articulos
             </p>
             <a href="/" class="button">Regresar</a>
             <a class="button is-info" href="/modificar/create">Agregar</a>
@@ -28,7 +28,7 @@
 
                 @forelse($modificars as $modificar)
                     <tr>
-                        <td>{{ $modificar->prodcuto }}</td>
+                        <td>{{ $modificar->producto }}</td>
                         <td>{{ $modificar->cantidad }}</td>
                         <td>{{ $modificar->precio }}</td>
                         </td>
@@ -42,7 +42,7 @@
 
                             <a class="button is-info is-small"
                             href="{{ route('modificar.edit', $modificar->id)}}">
-                            Editar</a>
+                            Restaurar</a>
 
                             @csrf
                             @method('DELETE')

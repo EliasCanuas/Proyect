@@ -30,5 +30,9 @@
 
             <a class="button is-link is-medium is-rounded" href="/almacen">
             Almacen</a>
+
+            <a class="button is-link is-medium is-rounded" href="/informe">
+            Informe</a>
+
             </div>
         @endsection
