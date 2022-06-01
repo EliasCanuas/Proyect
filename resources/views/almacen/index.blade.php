@@ -4,10 +4,10 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Interfaz del administrador
+                Agregar articulo
             </p>
             <a href="/" class="button">Regresar</a>
-            <a class="button is-info" href="/jefe/create">Agregar</a>
+            <a class="button is-info" href="/almacen/create">Agregar</a>
         </div>
     </section>
 
@@ -18,30 +18,28 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Articulo</th>
-                    <th>Precio de venta</th>
-                    <th>Proveedor</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
                 </tr>
                 </thead>
                 
                 <tbody>
 
-                @forelse($jefes as $jefe)
+                @forelse($almacens as $almacen)
                     <tr>
-                        <td>{{ $jefe->articulo }}</td>
-                        <td>$ {{ $jefe->precioventa }}</td>
-                        <td>{{ $jefe->proveedor }}</td>
+                        <td>{{ $almacen->prodcuto }}</td>
+                        <td>{{ $almacen->cantidad }}</td>
                         </td>
                         <td>
-                            <form action="{{ route('jefe.destroy', $jefe->id) }}" 
+                            <form action="{{ route('almacen.destroy', $almacen->id) }}" 
                             method="POST">
 
                             <a class="button is-info is-small"
-                            href="{{ route('jefe.show', $jefe->id)}}">
+                            href="{{ route('almacen.show', $almacen->id)}}">
                             Ver</a>
 
                             <a class="button is-info is-small"
-                            href="{{ route('jefe.edit', $jefe->id)}}">
+                            href="{{ route('almacen.edit', $almacen->id)}}">
                             Editar</a>
 
                             @csrf

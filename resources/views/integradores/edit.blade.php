@@ -21,7 +21,7 @@
 
                     <div>
                         <label for="">Articulo: </label>
-                        <textarea class="input is-large" name="articulo" id="" cols="30" rows="5"></textarea>
+                        <textarea class="input is-large" name="articulo" value="{{ $integrador->articulo}}" id=""></textarea>
                     </div>
 
 
@@ -31,7 +31,7 @@
 
                 <div>
                         <label for="">Cantidad: </label>
-                        <input class="input is-large" type="number" name="cantidad"  value="{{ $integrador->cantidad }}" id="">
+                        <input class="input is-large" type="number" name="cantidad" value="{{ $integrador->cantidad }}" id="">
                     </div>
 
                     <div>

@@ -4,15 +4,14 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Formulario para editar
+                Agregar y modificar articulos
             </p>
         </div>
     </section>
 
     <section class="section">
-        <form action="{{ route('jefe.update', $jefe->id) }}" method="post">
+        <form action="{{ route('almacen.store') }}" method="post">
             @csrf
-            @method('PUT')
 
             <div class="columns">
 
@@ -21,23 +20,18 @@
 
                     <div>
                         <label for="">Articulo: </label>
-                        <textarea class="input is-large" name="articulo" id="" cols="30" rows="5" value="{{ $jefe->articulo }}"></textarea>
+                        <textarea class="input is-large" type="text" name="producto" id=""></textarea>
                     </div>
 
-
-                </div>
+                    </div>
 
                 <div class="column">
 
                     <div>
-                        <label for="">Precio de venta: </label>
-                        <input class="input is-large" type="number" name="precioventa" value="{{ $jefe->precioventa }}" step="0.1" min="0" id="">
+                        <label for="">Cantidad: </label>
+                        <input class="input is-large" type="number" name="cantidad" step="1" min="0" id="">
                     </div>
 
-                    <div>
-                        <label for="">Proveedor: </label>
-                        <textarea class="input is-large" name="proveedor" id="" cols="30" rows="5" value="{{ $jefe->proveedor }}"></textarea>
-                    </div>
 
                 </div>
 
@@ -45,7 +39,7 @@
 
             <div>
             <div class="is-flex is-justify-content-space-around">
-                <a href="{{ url('jefe/') }}" class="button is-danger is-large">Cancelar</a>
+                <a href="{{ url('almacen/') }}" class="button is-danger is-large">Cancelar</a>
                 <input class="button is-light is-large" type="reset" value="Restablecer">
                 <input class="button is-link is-large" type="submit" value="Guardar">
             </div>

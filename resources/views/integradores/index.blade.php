@@ -26,16 +26,6 @@
                     <th>Total de pagar</th>
                 </tr>
                 </thead>
-                <tfoot>
-                <tr>
-                    <th>Articulo</th>
-                    <th>Cantidad</th>
-                    <th>Stock</th>
-                    <th>Precio</th>
-                    <th>Venta</th>
-                    <th>Total a pagar</th>
-                </tr>
-                </tfoot>
                 <tbody>
 
                 @forelse($integradors as $integrador)
@@ -46,11 +36,6 @@
                         <td>$ {{ $integrador->precio }}</td>
                         <td>{{ $integrador->venta }}</td>
                         <td>$ {{ $integrador->precio * $integrador->cantidad }}</td>
-                            @if ($integrador->disponible == 1 )
-                                <p>Disponible</p>
-                            @else
-                                <p>No disponible</p>
-                            @endif
                         </td>
                         <td>
                             <form action="{{ route('integrador.destroy', $integrador->id) }}" 

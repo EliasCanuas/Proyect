@@ -4,10 +4,10 @@
     <section class="hero is-link">
         <div class="hero-body">
             <p class="title">
-                Interfaz del administrador
+                Agregar articulo
             </p>
             <a href="/" class="button">Regresar</a>
-            <a class="button is-info" href="/jefe/create">Agregar</a>
+            <a class="button is-info" href="/articulo/create">Agregar</a>
         </div>
     </section>
 
@@ -18,30 +18,30 @@
             <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                 <thead>
                 <tr>
-                    <th>Articulo</th>
-                    <th>Precio de venta</th>
-                    <th>Proveedor</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
                 </tr>
                 </thead>
                 
                 <tbody>
 
-                @forelse($jefes as $jefe)
+                @forelse($articulos as $articulo)
                     <tr>
-                        <td>{{ $jefe->articulo }}</td>
-                        <td>$ {{ $jefe->precioventa }}</td>
-                        <td>{{ $jefe->proveedor }}</td>
+                        <td>{{ $articulo->prodcuto }}</td>
+                        <td>{{ $articulo->cantidad }}</td>
+                        <td>{{ $articulo->precio }}</td>
                         </td>
                         <td>
-                            <form action="{{ route('jefe.destroy', $jefe->id) }}" 
+                            <form action="{{ route('articulo.destroy', $articulo->id) }}" 
                             method="POST">
 
                             <a class="button is-info is-small"
-                            href="{{ route('jefe.show', $jefe->id)}}">
+                            href="{{ route('articulo.show', $articulo->id)}}">
                             Ver</a>
 
                             <a class="button is-info is-small"
-                            href="{{ route('jefe.edit', $jefe->id)}}">
+                            href="{{ route('articulo.edit', $articulo->id)}}">
                             Editar</a>
 
                             @csrf
